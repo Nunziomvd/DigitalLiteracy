@@ -1,0 +1,51 @@
+/* Set the background color and text color for the entire page */
+body {
+    background-color: #1e1e1e; /* Dark gray background */
+    color: #ffffff; /* White text */
+    font-family: 'Arial', sans-serif; /* Sans-serif font */
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Center the content and set a maximum width */
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  /* Style the main heading */
+  h1 {
+    font-size: 2.5em;
+    color: #00bfff; /* Light blue color */
+    margin-bottom: 10px;
+  }
+  
+  /* Style the paragraph text */
+  p {
+    font-size: 1.2em;
+    line-height: 1.5;
+  }
+  
+  /* Add a subtle shadow to the text */
+  h1, p {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  }
+  
+  .button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: #00bfff; /* Light blue */
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
+  
+  .button:hover {
+    background-color: #0077b3; /* Darker blue on hover */
+  }
+  
