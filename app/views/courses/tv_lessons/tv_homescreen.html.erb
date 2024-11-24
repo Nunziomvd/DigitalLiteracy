@@ -1,0 +1,125 @@
+<div class="container">
+  <h1>TV Home Screen Navigation</h1>
+  <div class="content">
+    <div class="text-container">
+      <p>Welcome to the next lesson! In this lesson, we will learn how to navigate the TV home screen using your remote control.</p>
+
+      <p>The first button you will use is the <strong>Home button</strong>. This button usually has a house icon on it. Pressing this button will take you to the TV's home screen, where you can see all the available apps, settings, and inputs.</p>
+
+      <p>Once on the home screen, you can use the <strong>Arrow buttons</strong> on the remote to move around. These buttons help you navigate between different sections, such as streaming apps, live TV, and settings. The arrow buttons are usually arranged in a directional pad (up, down, left, right).</p>
+
+      <p>After selecting an option, press the <strong>OK or Select button</strong> (usually in the center of the directional pad) to open it. This button is crucial for confirming your choices on the home screen.</p>
+
+      <p>Many TV home screens have shortcuts for popular apps like Netflix, YouTube, or Amazon Prime Video. You can access these by selecting them directly from the home screen or by using any dedicated buttons on your remote control if they exist.</p>
+
+      <p>To return to the previous screen, use the <strong>Back button</strong>, which is typically represented by an arrow pointing to the left. This button allows you to go back step-by-step if you make a mistake or want to explore a different section.</p>
+
+      <p>That covers the basics of navigating the TV home screen. Either return to all lessons or continue to the next lesson to learn about additional features!</p>
+
+      <!-- Add quiz here -->
+      <div class="quiz-container">
+        <h2>Quiz: Test Your Knowledge!</h2>
+        <p>1. Which button takes you to the TV's home screen?</p>
+        <button onclick="checkAnswer(this, true)">Home button</button>
+        <button onclick="checkAnswer(this, false)">Mute button</button>
+        <button onclick="checkAnswer(this, false)">Volume button</button>
+
+        <p>2. How do you select an option on the home screen?</p>
+        <button onclick="checkAnswer(this, false)">Press the power button</button>
+        <button onclick="checkAnswer(this, true)">Press the OK or Select button</button>
+        <button onclick="checkAnswer(this, false)">Press the mute button</button>
+
+        <p>3. Which button helps you return to the previous screen?</p>
+        <button onclick="checkAnswer(this, true)">Back button</button>
+        <button onclick="checkAnswer(this, false)">Home button</button>
+        <button onclick="checkAnswer(this, false)">Input button</button>
+      </div>
+
+      <p>Great job completing this lesson on navigating the TV home screen! Feel free to go back to the TV homepage or move on to the next lesson.</p>
+      <div class="button-container">
+        <a href="<%= tv_course_path %>" class="button">Back to TV Modules</a>
+        <a href="<%= tv_apps_path %>" class="button">Next Lesson</a>
+      </div>
+    </div>
+
+    <div class="image-container">
+      <%= image_tag 'tv_homescreen.png', alt: 'TV Home Screen', class: 'remote-image' %>
+    </div>
+  </div>
+</div>
+
+<style>
+  .container {
+    display: center;
+    properties: underline;
+    align-items: flex-start;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .content {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .text-container {
+    flex: 2;
+    padding-right: 20px;
+    box-sizing: border-box;
+  }
+
+  .image-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    box-sizing: border-box;
+  }
+
+  .homebutton {
+    display: center;
+    object-fit: contain;
+  }
+
+  .image-container img {
+    margin-bottom: 20px;
+    max-width: 100%;
+    height: auto;
+  }
+
+  body {
+    margin: 0;
+    overflow-x: hidden;
+  }
+
+  .quiz-container button {
+    display: block;
+    margin: 5px 0;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+  .quiz-container button.correct {
+    color: green;
+  }
+
+  .quiz-container button.incorrect {
+    color: red;
+  }
+</style>
+
+<script>
+  function checkAnswer(button, isCorrect) {
+    if (isCorrect) {
+      button.classList.add('correct');
+      button.innerHTML += ' - Correct!';
+    } else {
+      button.classList.add('incorrect');
+      button.innerHTML += ' - Incorrect!';
+    }
+  }
+</script>

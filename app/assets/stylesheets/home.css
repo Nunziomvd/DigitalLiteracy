@@ -1,51 +1,108 @@
-/* Set the background color and text color for the entire page */
+/* General Page Styling */
 body {
-    background-color: #1e1e1e; /* Dark gray background */
-    color: #ffffff; /* White text */
-    font-family: 'Arial', sans-serif; /* Sans-serif font */
-    margin: 0;
-    padding: 0;
-  }
-  
-  /* Center the content and set a maximum width */
-  .container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    text-align: center;
-  }
-  
-  /* Style the main heading */
-  h1 {
-    font-size: 2.5em;
-    color: #00bfff; /* Light blue color */
-    margin-bottom: 10px;
-  }
-  
-  /* Style the paragraph text */
-  p {
-    font-size: 1.2em;
-    line-height: 1.5;
-  }
-  
-  /* Add a subtle shadow to the text */
-  h1, p {
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-  }
-  
-  .button {
-    display: inline-block;
-    padding: 10px 20px;
-    margin-top: 20px;
-    background-color: #00bfff; /* Light blue */
-    color: #ffffff;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: background-color 0.3s;
-  }
-  
-  .button:hover {
-    background-color: #0077b3; /* Darker blue on hover */
-  }
-  
+  background-color: #1e1e1e; /* Dark gray background */
+  color: #ffffff; /* White text */
+  font-family: 'Arial', sans-serif; /* Sans-serif font */
+  margin: 0;
+  padding: 0;
+}
+
+/* Main Layout */
+.page-layout {
+  display: flex;
+  flex-direction: row;
+  height: 100vh; /* Full height layout */
+  background-color: #1e1e1e; /* Match body background */
+}
+
+/* Sidebar Styling */
+.sidebar {
+  width: 25%;
+  background-color: #2b2b2b; /* Slightly lighter gray for contrast */
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+  overflow-y: auto;
+}
+
+.sidebar h2 {
+  color: #00bfff; /* Light blue for headings */
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.module-list {
+  list-style: none;
+  padding: 0;
+}
+
+.module-list li {
+  margin: 10px 0;
+}
+
+.module-list a {
+  text-decoration: none;
+  color: #00bfff; /* Light blue links */
+  font-weight: bold;
+}
+
+.module-list a:hover {
+  color: #0077b3; /* Darker blue on hover */
+}
+
+/* Main Content Styling */
+.content {
+  width: 75%;
+  padding: 40px;
+  overflow-y: auto;
+}
+
+.content h1 {
+  font-size: 2.5em;
+  color: #00bfff; /* Light blue */
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+}
+
+.content p {
+  font-size: 1.2em;
+  line-height: 1.5;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.lesson-video {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.lesson-video video {
+  max-width: 100%;
+  height: auto;
+  border: 2px solid #00bfff; /* Light blue border */
+  border-radius: 8px;
+}
+
+/* Button Styling */
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 20px;
+  background-color: #00bfff; /* Light blue */
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: #0077b3; /* Darker blue on hover */
+}
+
+/* Centered Content (Optional Container) */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}

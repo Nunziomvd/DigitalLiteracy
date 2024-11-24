@@ -1,0 +1,29 @@
+<div class="page-layout">
+  <!-- Sidebar for Modules -->
+  <aside class="sidebar">
+    <h2>Modules</h2>
+    <ul class="module-list">
+      <li><a href="<%= tv_remote_path %>">1. Mastering the Remote Control</a></li>
+      <li><a href="<%= tv_homescreen_path %>">2. Navigating the Home Screen</a></li>
+      <li><a href="<%= tv_apps_path %>">3. Exploring Apps and Services</a></li>
+      <li><a href="<%= tv_live_path %>">4. Watching Live TV and Recordings</a></li>
+      <li><a href="<%= tv_voice_path %>">5. Using Voice Commands</a></li>
+      <li><a href="<%= tv_settings_path %>">6. Customizing Settings</a></li>
+      <li><a href="<%= tv_maintain_path %>">7. Maintaing Your Smart TV</a></li>
+    </ul>
+  </aside>
+
+  <!-- Main Content Area -->
+  <main class="content">
+    <h1>Current Course: Master Your Smart TV</h1>
+    <p>Welcome to the TV course, here you will learn everything you need to feel confident in using your new tv</p>
+
+    <!-- Add a picture -->
+    <div class="image-container">
+      <%= image_tag 'tv_homescreen.png', alt: 'TV Homescreen', class: 'homescreen-image', size: '800x500' %>
+    </div>
+
+    <p>To start lesson 1 click here</p>
+    <a href="<%= tv_remote_path %>" class="button">Begin</a>
+  </main>
+</div>

@@ -1,16 +1,109 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- *= require home
- */
+/* General Page Styling */
+body {
+  background-color: #1e1e1e; /* Dark gray background */
+  color: #ffffff; /* White text */
+  font-family: 'Arial', sans-serif; /* Sans-serif font */
+  margin: 0;
+  padding: 0;
+  height: 100vh; /* Full height */
+}
+
+/* Main Layout */
+.page-layout {
+  display: flex;
+  flex-direction: row;
+  height: 100vh; /* Full height layout */
+  background-color: #1e1e1e; /* Match body background */
+}
+
+/* Sidebar Styling */
+.sidebar {
+  width: 20%;
+  background-color: #2b2b2b; /* Slightly lighter gray for contrast */
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+  overflow-y: auto;
+}
+
+.sidebar h2 {
+  color: #00bfff; /* Light blue for headings */
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.module-list {
+  list-style: none;
+  padding: 0;
+}
+
+.module-list li {
+  margin: 10px 0;
+}
+
+.module-list a {
+  text-decoration: none;
+  color: #00bfff; /* Light blue links */
+  font-weight: bold;
+}
+
+.module-list a:hover {
+  color: #0077b3; /* Darker blue on hover */
+}
+
+/* Main Content Styling */
+.content {
+  width: 80%;
+  padding: 40px;
+  overflow-y: auto;
+}
+
+.content h1 {
+  font-size: 2.5em;
+  color: #00bfff; /* Light blue */
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+}
+
+.content p {
+  font-size: 1.2em;
+  line-height: 1.5;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.lesson-video {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.lesson-video video {
+  max-width: 100%;
+  height: auto;
+  border: 2px solid #00bfff; /* Light blue border */
+  border-radius: 8px;
+}
+
+/* Button Styling */
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 20px;
+  background-color: #00bfff; /* Light blue */
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: #0077b3; /* Darker blue on hover */
+}
+
+/* Centered Content (Optional Container) */
+.container {
+  width: 100%; /* Full width of the container */
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+}

@@ -1,0 +1,127 @@
+<div class="container">
+  <h1>TV Settings: Customizing Your Viewing Experience</h1>
+  <div class="content">
+    <div class="text-container">
+      <p>Welcome to the next lesson! In this lesson, we will discuss the various settings available on your TV and how to customize them to enhance your viewing experience.</p>
+
+      <p>To access the TV settings, press the <strong>Settings button</strong> on your remote, which is usually represented by a <strong>gear icon</strong>. Alternatively, you can navigate to the settings menu from the TV's home screen.</p>
+
+
+      <p>Here are some key settings that you can adjust:</p>
+      <ul>
+        <li><strong>Picture Settings</strong>: Adjust the picture quality by modifying settings such as brightness, contrast, sharpness, and color. Some TVs also offer predefined modes like <strong>Standard</strong>, <strong>Movie</strong>, or <strong>Sports</strong> to optimize the display for different types of content.</li>
+        <li><strong>Sound Settings</strong>: Customize the audio experience by adjusting the volume, bass, treble, and other sound settings. Many TVs also provide predefined sound modes, such as <strong>Surround</strong>, <strong>Dialogue</strong>, or <strong>Music</strong>, to enhance your experience.</li>
+        <li><strong>Network Settings</strong>: Connect your TV to the internet by navigating to the network settings. You can choose between a wired (Ethernet) or wireless (Wi-Fi) connection to access online content and apps.</li>
+        <li><strong>Input Settings</strong>: Manage the various devices connected to your TV, such as gaming consoles, streaming devices, and DVD players. You can rename inputs to make it easier to switch between devices.</li>
+        <li><strong>Parental Controls</strong>: Set up parental controls to restrict access to certain content or channels. You can create a PIN code to prevent children from accessing inappropriate content.</li>
+        <li><strong>System Settings</strong>: Update your TV's software, adjust language preferences, and manage other system-related settings. Keeping your TV updated ensures you have access to the latest features and bug fixes.</li>
+      </ul>
+
+      <p>To make adjustments, use the <strong>Arrow buttons</strong> on your remote to navigate through the settings menu, and press the <strong>OK or Select button</strong> to choose an option. You can always press the <strong>Back button</strong> to return to the previous menu if needed.</p>
+
+      <p>That covers the basics of customizing your TV settings. Feel free to explore the settings menu to adjust your TV according to your preferences!</p>
+
+      <!-- Add quiz here -->
+      <div class="quiz-container">
+        <h2>Quiz: Test Your Knowledge!</h2>
+        <p>1. How do you access the TV settings?</p>
+        <button onclick="checkAnswer(this, true)">Press the Settings button with a gear icon</button>
+        <button onclick="checkAnswer(this, false)">Press the Power button</button>
+        <button onclick="checkAnswer(this, false)">Press the Mute button</button>
+
+        <p>2. What can you adjust in Picture Settings?</p>
+        <button onclick="checkAnswer(this, true)">Brightness, contrast, and color</button>
+        <button onclick="checkAnswer(this, false)">Volume and bass</button>
+        <button onclick="checkAnswer(this, false)">Network connection</button>
+
+        <p>3. Which setting allows you to connect your TV to the internet?</p>
+        <button onclick="checkAnswer(this, false)">Picture Settings</button>
+        <button onclick="checkAnswer(this, false)">Parental Controls</button>
+        <button onclick="checkAnswer(this, true)">Network Settings</button>
+      </div>
+
+      <p>Great job completing this lesson on TV settings! Feel free to go back to the TV homepage or move on to the next lesson.</p>
+      <div class="button-container">
+        <a href="<%= tv_course_path %>" class="button">Back to TV Modules</a>
+        <a href="<%= tv_maintain_path %>" class="button">Next Lesson</a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<style>
+  .container {
+    display: center;
+    properties: underline;
+    align-items: flex-start;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .content {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .text-container {
+    flex: 2;
+    padding-right: 20px;
+    box-sizing: border-box;
+  }
+
+  .image-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    box-sizing: border-box;
+  }
+
+  .settingsbutton {
+    display: center;
+    object-fit: contain;
+  }
+
+  .image-container img {
+    margin-bottom: 20px;
+    max-width: 100%;
+    height: auto;
+  }
+
+  body {
+    margin: 0;
+    overflow-x: hidden;
+  }
+
+  .quiz-container button {
+    display: block;
+    margin: 5px 0;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+  .quiz-container button.correct {
+    color: green;
+  }
+
+  .quiz-container button.incorrect {
+    color: red;
+  }
+</style>
+
+<script>
+  function checkAnswer(button, isCorrect) {
+    if (isCorrect) {
+      button.classList.add('correct');
+      button.innerHTML += ' - Correct!';
+    } else {
+      button.classList.add('incorrect');
+      button.innerHTML += ' - Incorrect!';
+    }
+  }
+</script>

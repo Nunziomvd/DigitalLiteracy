@@ -1,0 +1,126 @@
+<div class="container">
+  <h1>TV Apps: Discovering and Installing New Apps</h1>
+  <div class="content">
+    <div class="text-container">
+      <p>Welcome to the next lesson! In this lesson, we will learn about the various apps available on your TV and how to search for and install new ones.</p>
+
+      <p>The first step is to go to the <strong>Home screen</strong> by pressing the Home button on your remote. On the home screen, you will see a section dedicated to apps, which may include some pre-installed ones like Netflix, YouTube, or Hulu.</p>
+
+      <p>To browse for more apps, navigate to the <strong>App Store</strong> or <strong>Apps section</strong> on your TV. This section is where you can find a wide variety of applications for streaming, gaming, and much more.</p>
+
+
+      <p>Use the <strong>Arrow buttons</strong> on your remote to move around the app store. You can use the <strong>Search function</strong> to look for specific apps by name. Usually, there is a magnifying glass icon representing the search option.</p>
+
+      <p>To install a new app, first select the app you are interested in by navigating to it with the arrow buttons and pressing the <strong>OK or Select button</strong>. This will open the app's page, where you can choose the <strong>Install button</strong> to begin downloading and installing the app.</p>
+
+      <p>Once the app is installed, it will appear on your home screen or in your apps list. You can access it by selecting it from there.</p>
+
+      <p>Some TVs also allow you to <strong>organize your apps</strong> by moving them around on the home screen. You can typically do this by selecting an app and holding down the OK button until you see an option to move it.</p>
+
+      <p>That covers the basics of finding, installing, and organizing apps on your TV. Either return to all lessons or move on to the next lesson to learn about additional features!</p>
+
+      <!-- Add quiz here -->
+      <div class="quiz-container">
+        <h2>Quiz: Test Your Knowledge!</h2>
+        <p>1. Where can you find new apps for your TV?</p>
+        <button onclick="checkAnswer(this, true)">App Store or Apps section</button>
+        <button onclick="checkAnswer(this, false)">Volume section</button>
+        <button onclick="checkAnswer(this, false)">Settings</button>
+
+        <p>2. What symbol represents the search function?</p>
+        <button onclick="checkAnswer(this, false)">Gear icon</button>
+        <button onclick="checkAnswer(this, false)">House icon</button>
+        <button onclick="checkAnswer(this, true)">Magnifying glass icon</button>
+
+        <p>3. How do you install a new app?</p>
+        <button onclick="checkAnswer(this, false)">Press the power button</button>
+        <button onclick="checkAnswer(this, true)">Select the app and press the Install button</button>
+        <button onclick="checkAnswer(this, false)">Press the mute button</button>
+      </div>
+
+      <p>Great job completing this lesson on discovering and installing TV apps! Feel free to go back to the TV homepage or move on to the next lesson.</p>
+      <div class="button-container">
+        <a href="<%= tv_course_path %>" class="button">Back to TV Modules</a>
+        <a href="<%= tv_live_path %>" class="button">Next Lesson</a>
+      </div>
+    </div>
+
+
+  </div>
+</div>
+
+<style>
+  .container {
+    display: center;
+    properties: underline;
+    align-items: flex-start;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .content {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .text-container {
+    flex: 2;
+    padding-right: 20px;
+    box-sizing: border-box;
+  }
+
+  .image-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    box-sizing: border-box;
+  }
+
+  .appstorebutton {
+    display: center;
+    object-fit: contain;
+  }
+
+  .image-container img {
+    margin-bottom: 20px;
+    max-width: 100%;
+    height: auto;
+  }
+
+  body {
+    margin: 0;
+    overflow-x: hidden;
+  }
+
+  .quiz-container button {
+    display: block;
+    margin: 5px 0;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+  .quiz-container button.correct {
+    color: green;
+  }
+
+  .quiz-container button.incorrect {
+    color: red;
+  }
+</style>
+
+<script>
+  function checkAnswer(button, isCorrect) {
+    if (isCorrect) {
+      button.classList.add('correct');
+      button.innerHTML += ' - Correct!';
+    } else {
+      button.classList.add('incorrect');
+      button.innerHTML += ' - Incorrect!';
+    }
+  }
+</script>

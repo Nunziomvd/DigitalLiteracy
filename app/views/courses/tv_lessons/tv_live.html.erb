@@ -1,0 +1,123 @@
+<div class="container">
+  <h1>Live TV and Recording Shows</h1>
+  <div class="content">
+    <div class="text-container">
+      <p>Welcome to the next lesson! In this lesson, we will discuss how to watch live TV, record shows, and manage DVR (Digital Video Recorder) features on your TV.</p>
+
+      <p>To start watching <strong>Live TV</strong>, press the <strong>Live TV button</strong> on your remote, or navigate to the Live TV option from the home screen. This will allow you to watch broadcast channels, cable channels, or any live TV services connected to your TV.</p>
+
+      <p>When watching live TV, you can use the <strong>Channel Up and Down buttons</strong> to switch between channels. You can also use the <strong>Guide button</strong> (often represented by a grid icon) to see what is currently airing and what will be broadcast later.</p>
+
+      <p>If you want to <strong>record a show</strong>, you will need to use the <strong>DVR button</strong> or the recording feature in your TV's guide. Select the show you want to record and press the <strong>Record button</strong> on your remote. The show will be saved to your DVR, allowing you to watch it later.</p>
+
+      <p>You can also schedule recordings for future shows. Simply go to the guide, find the show you want to record, and select it to set up a future recording. You can record a single episode or set up a series recording to ensure you never miss an episode.</p>
+
+      <p>To watch your recorded shows, go to the <strong>DVR menu</strong> on your TV. This menu will list all the shows you have recorded, and you can select any show to start watching it. You can also manage your recordings by deleting old shows you no longer need or modifying future recordings.</p>
+
+      <p>Some TVs also have the ability to <strong>pause live TV</strong>. This feature allows you to pause what you're watching and resume it later without missing anything. To use this feature, simply press the <strong>Pause button</strong> on your remote.</p>
+
+      <p>That covers the basics of watching live TV, recording shows, and managing your DVR. Either return to all lessons or move on to the next lesson to learn about additional features!</p>
+
+      <!-- Add quiz here -->
+      <div class="quiz-container">
+        <h2>Quiz: Test Your Knowledge!</h2>
+        <p>1. How do you start watching live TV?</p>
+        <button onclick="checkAnswer(this, true)">Press the Live TV button or navigate to Live TV on the home screen</button>
+        <button onclick="checkAnswer(this, false)">Press the Mute button</button>
+        <button onclick="checkAnswer(this, false)">Press the Home button</button>
+
+        <p>2. How do you record a show?</p>
+        <button onclick="checkAnswer(this, false)">Press the Power button</button>
+        <button onclick="checkAnswer(this, true)">Press the Record button while selecting the show</button>
+        <button onclick="checkAnswer(this, false)">Press the Volume button</button>
+
+        <p>3. What button allows you to see what is currently airing?</p>
+        <button onclick="checkAnswer(this, false)">Pause button</button>
+        <button onclick="checkAnswer(this, true)">Guide button</button>
+        <button onclick="checkAnswer(this, false)">Channel button</button>
+      </div>
+
+      <p>Great job completing this lesson on live TV and recording shows! Feel free to go back to the TV homepage or move on to the next lesson.</p>
+      <div class="button-container">
+        <a href="<%= tv_course_path %>" class="button">Back to TV Modules</a>
+        <a href="<%= tv_voice_path %>" class="button">Next Lesson</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .container {
+    display: center;
+    properties: underline;
+    align-items: flex-start;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .content {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .text-container {
+    flex: 2;
+    padding-right: 20px;
+    box-sizing: border-box;
+  }
+
+  .image-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    box-sizing: border-box;
+  }
+
+  .livetvbutton, .recordbutton {
+    display: center;
+    object-fit: contain;
+  }
+
+  .image-container img {
+    margin-bottom: 20px;
+    max-width: 100%;
+    height: auto;
+  }
+
+  body {
+    margin: 0;
+    overflow-x: hidden;
+  }
+
+  .quiz-container button {
+    display: block;
+    margin: 5px 0;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+  .quiz-container button.correct {
+    color: green;
+  }
+
+  .quiz-container button.incorrect {
+    color: red;
+  }
+</style>
+
+<script>
+  function checkAnswer(button, isCorrect) {
+    if (isCorrect) {
+      button.classList.add('correct');
+      button.innerHTML += ' - Correct!';
+    } else {
+      button.classList.add('incorrect');
+      button.innerHTML += ' - Incorrect!';
+    }
+  }
+</script>

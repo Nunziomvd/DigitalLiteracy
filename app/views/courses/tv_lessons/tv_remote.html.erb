@@ -1,0 +1,123 @@
+<div class="container">
+  <h1>TV Remote</h1>
+  <div class="content">
+    <div class="text-container">
+      <p>Welcome to the first lesson, here we will be dealing with a generic remote and most of its buttons.</p>
+
+      <p> The first button we will be looking at is the power button. This is the universal symbol on nearly every device to turn something on.</p>
+      <div class="powerbutton">
+        <%= image_tag 'tv_powerbutton.png', alt: 'TV Remote', class: 'remote-image', style: 'width:100px;height:auto;'  %>
+      </div>
+      <p> Next we have the volume up and down button along with the mute. The volume will not always be labeled as "vol" however the '+' and '-' will always be there to represent the volume up and volume down. Mute instantly turns the volume off.</p>
+      <p> We also have the input button, your television is able to have different things running to it so always make sure your TV input is set to TV, or additionally clicking the home button will bring you there as long as the TV is on.</p>
+      <p> And that sums up the basics for the buttons of the TV remote. Either return to all lessons or go to the next lesson here.</p>
+      <p> Some TV remotes allow for voice control, usually notified by a microphone or speaking icon which allows you to speak directly into it rather than using the buttons to find something.</p>
+      <p> Finally the settings button which is represented by the gear icon, this will be discussed in a later lesson. </p>
+
+      <!-- Add quiz here -->
+      <div class="quiz-container">
+        <h2>Quiz: Test Your Knowledge!</h2>
+        <p>1. What does the power button do?</p>
+        <button onclick="checkAnswer(this, true)">Turns the TV on or off</button>
+        <button onclick="checkAnswer(this, false)">Changes the volume</button>
+        <button onclick="checkAnswer(this, false)">Mutes the TV</button>
+
+        <p>2. What symbol represents the settings button?</p>
+        <button onclick="checkAnswer(this, false)">Microphone</button>
+        <button onclick="checkAnswer(this, true)">Gear icon</button>
+        <button onclick="checkAnswer(this, false)">Plus and minus symbols</button>
+
+        <p>3. What does the mute button do?</p>
+        <button onclick="checkAnswer(this, false)">Turns the TV off</button>
+        <button onclick="checkAnswer(this, false)">Changes the channel</button>
+        <button onclick="checkAnswer(this, true)">Instantly turns the volume off</button>
+      </div>
+
+      <p> Good job with the first lesson in the TV Course either go back to the TV homepage or move on to the next lesson.</p>
+      <div class="button-container">
+        <a href="<%= tv_course_path %>" class="button">Back to TV Modules</a>
+        <a href="<%= tv_homescreen_path %>" class="button">Next Lesson</a>
+      </div>
+    </div>
+
+    <div class="image-container">
+      <%= image_tag 'tv_remote.png', alt: 'TV Remote', class: 'remote-image' %>
+    </div>
+  </div>
+</div>
+
+<style>
+  .container {
+    display: center;
+    properties: underline;
+    align-items: flex-start;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .content {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .text-container {
+    flex: 2;
+    padding-right: 20px;
+    box-sizing: border-box;
+  }
+
+  .image-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    box-sizing: border-box;
+  }
+
+  .powerbutton {
+    display: center;
+    object-fit: contain;
+  }
+
+  .image-container img {
+    margin-bottom: 20px;
+    max-width: 100%;
+    height: auto;
+  }
+
+  body {
+    margin: 0;
+    overflow-x: hidden;
+  }
+
+  .quiz-container button {
+    display: block;
+    margin: 5px 0;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+  .quiz-container button.correct {
+    color: green;
+  }
+
+  .quiz-container button.incorrect {
+    color: red;
+  }
+</style>
+
+<script>
+  function checkAnswer(button, isCorrect) {
+    if (isCorrect) {
+      button.classList.add('correct');
+      button.innerHTML += ' - Correct!';
+    } else {
+      button.classList.add('incorrect');
+      button.innerHTML += ' - Incorrect!';
+    }
+  }
+</script>
