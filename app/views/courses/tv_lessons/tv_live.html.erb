@@ -5,18 +5,20 @@
       <p>Welcome to the next lesson! In this lesson, we will discuss how to watch live TV, record shows, and manage DVR (Digital Video Recorder) features on your TV.</p>
 
       <p>To start watching <strong>Live TV</strong>, press the <strong>Live TV button</strong> on your remote, or navigate to the Live TV option from the home screen. This will allow you to watch broadcast channels, cable channels, or any live TV services connected to your TV.</p>
-
+    <div class="image-container">
+      <%= image_tag 'tv_guide.png', alt: 'TV Home Screen', class: 'remote-image', style: 'max-width: 60%; height: auto;' %>
+    </div>
       <p>When watching live TV, you can use the <strong>Channel Up and Down buttons</strong> to switch between channels. You can also use the <strong>Guide button</strong> (often represented by a grid icon) to see what is currently airing and what will be broadcast later.</p>
 
       <p>If you want to <strong>record a show</strong>, you will need to use the <strong>DVR button</strong> or the recording feature in your TV's guide. Select the show you want to record and press the <strong>Record button</strong> on your remote. The show will be saved to your DVR, allowing you to watch it later.</p>
 
       <p>You can also schedule recordings for future shows. Simply go to the guide, find the show you want to record, and select it to set up a future recording. You can record a single episode or set up a series recording to ensure you never miss an episode.</p>
-
+    <div class="image-container">
+    <%= image_tag 'tv_recorded.png', alt: 'TV Home Screen', class: 'remote-image', style: 'max-width: 60%; height: auto;' %>
+  </div>
       <p>To watch your recorded shows, go to the <strong>DVR menu</strong> on your TV. This menu will list all the shows you have recorded, and you can select any show to start watching it. You can also manage your recordings by deleting old shows you no longer need or modifying future recordings.</p>
 
       <p>Some TVs also have the ability to <strong>pause live TV</strong>. This feature allows you to pause what you're watching and resume it later without missing anything. To use this feature, simply press the <strong>Pause button</strong> on your remote.</p>
-
-      <p>That covers the basics of watching live TV, recording shows, and managing your DVR. Either return to all lessons or move on to the next lesson to learn about additional features!</p>
 
       <!-- Add quiz here -->
       <div class="quiz-container">
@@ -70,7 +72,7 @@
 
   .image-container {
     flex: 1;
-    display: flex;
+    display: center;
     flex-direction: column;
     align-items: flex-end;
     box-sizing: border-box;
@@ -93,7 +95,7 @@
   }
 
   .quiz-container button {
-    display: block;
+    display: inline-block;
     margin: 5px 0;
     padding: 10px;
     border: none;

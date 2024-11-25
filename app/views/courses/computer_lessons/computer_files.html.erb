@@ -1,0 +1,111 @@
+<div class="container">
+  <h1>Files and Folders</h1>
+  <div class="content">
+    <div class="text-container">
+      <p>Welcome to this lesson on files and folders! In this lesson, we will cover what files and folders are, how to organize them effectively, and explore some best practices for managing your digital content.</p>
+
+      <p>A <strong>File</strong> is a collection of data or information that is stored on your computer. Files can be documents, images, videos, or any type of digital content that you create or save. Every file has a name and an extension, such as <em>.docx</em>, <em>.jpg</em>, or <em>.mp4</em>, which helps you identify what type of data it contains.</p>
+
+      <p>A <strong>Folder</strong>, also known as a directory, is used to organize files. Folders help you keep related files together, making it easier to find and manage your content. For example, you might have a folder named "Vacation Photos" that contains all your pictures from a recent trip.</p>
+
+      <p>To <strong>create a new folder</strong>, right-click on the desktop or in an existing folder, select "New," and then click on "Folder." You can then give the folder a name that helps you remember what it contains.</p>
+
+      <p>To <strong>move files</strong> into a folder, simply click and drag the file into the desired folder. This way, you can keep your computer organized and easily find your documents, pictures, or other important files.</p>
+
+      <p>It’s also a good idea to use <strong>meaningful file names</strong>. Instead of naming a document "Document1," use a name like "Resume_2024" so that you know exactly what the file contains without needing to open it.</p>
+
+      <p>If you need to <strong>search for a file</strong>, you can use the search bar in File Explorer (Windows) or Finder (Mac). Just type in part of the file name or file type, and the system will help you locate it quickly.</p>
+
+      <div class="quiz-container">
+        <h2>Quiz: Test Your Knowledge!</h2>
+        <p>1. What is a folder used for?</p>
+        <button onclick="checkAnswer(this, true)">Organizing files</button>
+        <button onclick="checkAnswer(this, false)">Playing videos</button>
+        <button onclick="checkAnswer(this, false)">Editing text</button>
+
+        <p>2. How do you create a new folder?</p>
+        <button onclick="checkAnswer(this, true)">Right-click, select "New," then "Folder"</button>
+        <button onclick="checkAnswer(this, false)">Double-click a file</button>
+        <button onclick="checkAnswer(this, false)">Open a web browser</button>
+
+        <p>3. What is the benefit of using meaningful file names?</p>
+        <button onclick="checkAnswer(this, true)">Makes it easier to find files</button>
+        <button onclick="checkAnswer(this, false)">Takes up less space</button>
+        <button onclick="checkAnswer(this, false)">Increases file size</button>
+      </div>
+
+      <p>Great job completing this lesson on files and folders! Feel free to go back to the main modules or move on to the next lesson.</p>
+      <div class="button-container">
+        <a href="<%= computer_course_path %>" class="button">Back to Computer Modules</a>
+        <a href="<%= computer_safety_path %>" class="button">Next Lesson</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .container {
+    display: center;
+    align-items: flex-start;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .content {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .text-container {
+    flex: 2;
+    padding-right: 20px;
+    box-sizing: border-box;
+  }
+
+  .quiz-container button {
+    display: inline-block;
+    margin: 5px 0;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+  .quiz-container button.correct {
+    color: green;
+  }
+
+  .quiz-container button.incorrect {
+    color: red;
+  }
+
+  .button-container a.button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+
+  .button-container a.button:hover {
+    background-color: #0056b3;
+  }
+</style>
+
+<script>
+  function checkAnswer(button, isCorrect) {
+    if (isCorrect) {
+      button.classList.add('correct');
+      button.innerHTML += ' - Correct!';
+    } else {
+      button.classList.add('incorrect');
+      button.innerHTML += ' - Incorrect!';
+    }
+  }
+</script>
+

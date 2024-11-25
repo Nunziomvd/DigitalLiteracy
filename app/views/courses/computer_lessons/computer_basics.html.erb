@@ -1,0 +1,134 @@
+<div class="container">
+  <h1>Computer Basics</h1>
+  <div class="content">
+    <div class="text-container">
+      <p>Welcome to the first lesson! In this lesson, we will cover the basics of using a computer, including understanding its key components and how they work together.</p>
+
+      <p>One of the most important parts of a computer is the <strong>Monitor</strong>. It displays what you are doing on the computer, allowing you to interact with different applications and see your work.</p>
+
+      <p>The <strong>Mouse</strong> is another essential component. It helps you navigate around your computer screen by moving a pointer. You can click on icons, select files, or open programs using the mouse.</p>
+
+      <p>The <strong>Keyboard</strong> is used for typing. It allows you to input letters, numbers, and other symbols to communicate with your computer. You will often use it to write documents or perform searches on the internet.</p>
+
+      <p>When using the computer, you will interact with a variety of programs or applications. To open a program, simply double-click on its icon with the mouse. For example, if you want to browse the internet, you would double-click on the browser icon (such as Chrome or Firefox).</p>
+
+      <p>Computers also have a <strong>Start Menu</strong> (on Windows computers) or a <strong>Dock</strong> (on Mac computers) where you can find and open applications, settings, and files.</p>
+
+      <p>To <strong>turn off your computer</strong>, you should always do it properly through the start menu, selecting the shutdown option. This helps prevent damage and keeps your computer working well.</p>
+
+
+      <!-- Add quiz here -->
+      <div class="quiz-container">
+        <h2>Quiz: Test Your Knowledge!</h2>
+        <p>1. Which component helps you see what's happening on your computer?</p>
+        <button onclick="checkAnswer(this, true)">Monitor</button>
+        <button onclick="checkAnswer(this, false)">Keyboard</button>
+        <button onclick="checkAnswer(this, false)">Mouse</button>
+
+        <p>2. What do you use to type on the computer?</p>
+        <button onclick="checkAnswer(this, false)">Mouse</button>
+        <button onclick="checkAnswer(this, true)">Keyboard</button>
+        <button onclick="checkAnswer(this, false)">Monitor</button>
+
+        <p>3. How do you properly turn off your computer?</p>
+        <button onclick="checkAnswer(this, true)">Use the shutdown option in the start menu</button>
+        <button onclick="checkAnswer(this, false)">Unplug it</button>
+        <button onclick="checkAnswer(this, false)">Press any key</button>
+      </div>
+
+      <p>Great job completing this lesson on computer basics! Feel free to go back to the main modules or move on to the next lesson.</p>
+      <div class="button-container">
+        <a href="<%= computer_course_path %>" class="button">Back to Computer Modules</a>
+        <a href="<%= computer_passwords_path %>" class="button">Next Lesson</a>
+      </div>
+    </div>
+
+
+  </div>
+</div>
+
+<style>
+  .container {
+    display: center;
+    properties: underline;
+    align-items: flex-start;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .content {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .text-container {
+    flex: 2;
+    padding-right: 20px;
+    box-sizing: border-box;
+  }
+
+  .image-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    box-sizing: border-box;
+  }
+
+  .image-container img {
+    margin-bottom: 20px;
+    max-width: 100%;
+    height: auto;
+  }
+
+  body {
+    margin: 0;
+    overflow-x: hidden;
+  }
+
+  .quiz-container button {
+    display: inline-block;
+    margin: 5px 0;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+  .quiz-container button.correct {
+    color: green;
+  }
+
+  .quiz-container button.incorrect {
+    color: red;
+  }
+
+  .button-container a.button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+
+  .button-container a.button:hover {
+    background-color: #0056b3;
+  }
+</style>
+
+<script>
+  function checkAnswer(button, isCorrect) {
+    if (isCorrect) {
+      button.classList.add('correct');
+      button.innerHTML += ' - Correct!';
+    } else {
+      button.classList.add('incorrect');
+      button.innerHTML += ' - Incorrect!';
+    }
+  }
+</script>

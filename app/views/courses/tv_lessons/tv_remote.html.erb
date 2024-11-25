@@ -9,10 +9,21 @@
         <%= image_tag 'tv_powerbutton.png', alt: 'TV Remote', class: 'remote-image', style: 'width:100px;height:auto;'  %>
       </div>
       <p> Next we have the volume up and down button along with the mute. The volume will not always be labeled as "vol" however the '+' and '-' will always be there to represent the volume up and volume down. Mute instantly turns the volume off.</p>
+      <div class="powerbutton">
+        <%= image_tag 'tv_volume.png', alt: 'TV Remote', class: 'remote-image', style: 'width:100px;height:auto;'  %>
+      </div>
       <p> We also have the input button, your television is able to have different things running to it so always make sure your TV input is set to TV, or additionally clicking the home button will bring you there as long as the TV is on.</p>
-      <p> And that sums up the basics for the buttons of the TV remote. Either return to all lessons or go to the next lesson here.</p>
+      <div class="powerbutton">
+        <%= image_tag 'tv_input.png', alt: 'TV Remote', class: 'remote-image', style: 'width:100px;height:auto;'  %>
+      </div>
       <p> Some TV remotes allow for voice control, usually notified by a microphone or speaking icon which allows you to speak directly into it rather than using the buttons to find something.</p>
+      <div class="powerbutton">
+        <%= image_tag 'tv_voice.png', alt: 'TV Remote', class: 'remote-image', style: 'width:100px;height:auto;'  %>
+      </div>
       <p> Finally the settings button which is represented by the gear icon, this will be discussed in a later lesson. </p>
+      <div class="powerbutton">
+        <%= image_tag 'tv_settings.png', alt: 'TV Remote', class: 'remote-image', style: 'width:100px;height:auto;'  %>
+      </div>
 
       <!-- Add quiz here -->
       <div class="quiz-container">
@@ -22,10 +33,10 @@
         <button onclick="checkAnswer(this, false)">Changes the volume</button>
         <button onclick="checkAnswer(this, false)">Mutes the TV</button>
 
-        <p>2. What symbol represents the settings button?</p>
+        <p>2. What symbol represents the volume button?</p>
         <button onclick="checkAnswer(this, false)">Microphone</button>
-        <button onclick="checkAnswer(this, true)">Gear icon</button>
-        <button onclick="checkAnswer(this, false)">Plus and minus symbols</button>
+        <button onclick="checkAnswer(this, false)">Gear icon</button>
+        <button onclick="checkAnswer(this, true)">Plus and minus symbols</button>
 
         <p>3. What does the mute button do?</p>
         <button onclick="checkAnswer(this, false)">Turns the TV off</button>
@@ -92,10 +103,14 @@
     overflow-x: hidden;
   }
 
+  .quiz-container {
+    text-align: center;
+  }
+
   .quiz-container button {
-    display: block;
-    margin: 5px 0;
-    padding: 10px;
+    display: inline-block;
+    margin: 10px auto;
+    padding: 10px 20px;
     border: none;
     cursor: pointer;
     font-size: 16px;

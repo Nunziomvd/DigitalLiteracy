@@ -29,4 +29,27 @@ class CoursesController < ApplicationController
 
   def computer
   end
+
+  def computer_apps
+    render 'courses/computer_lessons/computer_apps'
+  end
+  def computer_basics
+    render 'courses/computer_lessons/computer_basics'
+  end
+  def computer_files
+    render 'courses/computer_lessons/computer_files'
+  end
+  def computer_internet
+    render 'courses/computer_lessons/computer_internet'
+  end
+  def computer_passwords
+    render 'courses/computer_lessons/computer_passwords'
+  end
+  def computer_safety
+    render 'courses/computer_lessons/computer_safety'
+  end
+  def computer_settings
+    render 'courses/computer_lessons/computer_settings'
+  end
+  
 end

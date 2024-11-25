@@ -3,7 +3,9 @@
   <div class="content">
     <div class="text-container">
       <p>Welcome to the next lesson! In this lesson, we will learn about the various apps available on your TV and how to search for and install new ones.</p>
-
+      <div class="image-container">
+    <%= image_tag 'tv_apps.png',display:'center', alt: 'TV Home Screen', style: 'max-width: 40%; height: auto;' %>
+  </div>
       <p>The first step is to go to the <strong>Home screen</strong> by pressing the Home button on your remote. On the home screen, you will see a section dedicated to apps, which may include some pre-installed ones like Netflix, YouTube, or Hulu.</p>
 
       <p>To browse for more apps, navigate to the <strong>App Store</strong> or <strong>Apps section</strong> on your TV. This section is where you can find a wide variety of applications for streaming, gaming, and much more.</p>
@@ -12,12 +14,12 @@
       <p>Use the <strong>Arrow buttons</strong> on your remote to move around the app store. You can use the <strong>Search function</strong> to look for specific apps by name. Usually, there is a magnifying glass icon representing the search option.</p>
 
       <p>To install a new app, first select the app you are interested in by navigating to it with the arrow buttons and pressing the <strong>OK or Select button</strong>. This will open the app's page, where you can choose the <strong>Install button</strong> to begin downloading and installing the app.</p>
-
+    <div class="image-container">
+    <%= image_tag 'tv_search.png', alt: 'TV Home Screen', class: 'remote-image', style: 'max-width: 60%; height: auto;' %>
+  </div>
       <p>Once the app is installed, it will appear on your home screen or in your apps list. You can access it by selecting it from there.</p>
 
       <p>Some TVs also allow you to <strong>organize your apps</strong> by moving them around on the home screen. You can typically do this by selecting an app and holding down the OK button until you see an option to move it.</p>
-
-      <p>That covers the basics of finding, installing, and organizing apps on your TV. Either return to all lessons or move on to the next lesson to learn about additional features!</p>
 
       <!-- Add quiz here -->
       <div class="quiz-container">
@@ -73,7 +75,7 @@
 
   .image-container {
     flex: 1;
-    display: flex;
+    display: center;
     flex-direction: column;
     align-items: flex-end;
     box-sizing: border-box;
@@ -96,7 +98,7 @@
   }
 
   .quiz-container button {
-    display: block;
+    display: inline-block;
     margin: 5px 0;
     padding: 10px;
     border: none;

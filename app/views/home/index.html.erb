@@ -2,6 +2,48 @@
   <h1>Welcome to Senior Digital Literacy</h1>
   <p>This web application is designed to help seniors improve their digital skills!</p>
 
-  <!-- Courses button -->
-  <a href="<%= courses_path %>" class="button">View Courses</a>
+  <!-- Add a picture -->
+  <div class="image-container">
+    <%= image_tag 'senior.png', alt: 'TV Homescreen', class: 'homescreen-image', style: 'max-width: 150%; height: auto;' %>
+  </div>
+
+  <!-- Course buttons -->
+  <div class="courses">
+    <a href="<%= courses_path %>" class="button">View Courses</a>
+  </div>
 </div>
+  
+<style>
+  body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Prevent any scrollbars from appearing */
+    width: 110%;
+    height: 100%;
+  }
+
+  .container {
+
+    box-sizing: border-box;
+    display: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+  }
+
+  .courses {
+    display: center;
+    gap: 20px; /* Spacing between buttons */
+    flex-wrap: wrap; /* Ensure buttons wrap within the container */
+  }
+
+  .button {
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+</style>

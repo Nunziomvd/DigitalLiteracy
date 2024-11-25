@@ -7,6 +7,18 @@ Rails.application.routes.draw do
   get 'courses/phone', to: 'courses#phone', as: 'phone_course'
   get 'courses/computer', to: 'courses#computer', as: 'computer_course'
 
+  # TV Lesson Routes (Grouped)
+  scope 'courses/computer', as: 'computer' do
+    get 'lessons/computer_basics', to: 'courses#computer_basics', as: 'basics'
+    get 'lessons/computer_passwords', to: 'courses#computer_passwords', as: 'passwords'
+    get 'lessons/computer_internet', to: 'courses#computer_internet', as: 'internet'
+    get 'lessons/computer_apps', to: 'courses#computer_apps', as: 'apps'
+    get 'lessons/computer_files', to: 'courses#computer_files', as: 'files'
+    get 'lessons/computer_safety', to: 'courses#computer_safety', as: 'safety'
+    get 'lessons/computer_settings', to: 'courses#computer_settings', as: 'settings'
+
+
+  end
   # TV Course Routes
   get 'courses/tv', to: 'courses#tv', as: 'tv_course'
 

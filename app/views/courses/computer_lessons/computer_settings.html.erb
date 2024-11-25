@@ -1,0 +1,130 @@
+<div class="container">
+  <h1>Computer Settings and Maintenance</h1>
+  <div class="content">
+    <div class="text-container">
+      <p>Welcome to this lesson on computer settings and maintenance! In this lesson, we will cover how to customize your computer settings to improve your experience and make your computer easier to use, as well as how to maintain your computer to keep it running smoothly.</p>
+
+      <p>The <strong>Display Settings</strong> allow you to adjust the brightness, resolution, and orientation of your screen. You can also change the size of text and icons to make them easier to see. To access display settings, right-click on your desktop and select "Display settings" (Windows) or go to "System Preferences > Displays" (Mac).</p>
+
+      <p><strong>Sound Settings</strong> help you control the audio output and input on your computer. You can adjust the volume, change the playback device, or set up microphones. On Windows, you can find sound settings in the Control Panel or by clicking on the sound icon in the taskbar. On a Mac, sound settings are in "System Preferences > Sound".</p>
+
+      <p>For managing <strong>Wi-Fi and Network Connections</strong>, you can access network settings to connect to different Wi-Fi networks, troubleshoot connectivity issues, or manage your Ethernet connections. On Windows, go to "Network & Internet" settings, and on a Mac, go to "System Preferences > Network".</p>
+
+      <p><strong>Power Settings</strong> allow you to manage how your computer uses energy. You can set up sleep mode, adjust screen timeout, and choose power-saving options to extend your battery life (especially important for laptops). On Windows, these options can be found under "Power & Sleep" settings, and on Mac, they are under "Energy Saver" in "System Preferences".</p>
+
+      <p><strong>Privacy Settings</strong> are also very important. These settings help control which apps can access your location, microphone, and camera. You can also manage permissions for other types of data. On Windows, go to "Privacy" settings, and on Mac, go to "Security & Privacy" in "System Preferences".</p>
+
+      <p>You can also customize your computer with <strong>Personalization Settings</strong>. This includes changing your desktop background, choosing a theme, or modifying the lock screen. These options help make your computer feel more personal and comfortable. On Windows, you can access these options under "Personalization," and on Mac, you can find them in "Desktop & Screen Saver" settings.</p>
+
+      <h2>Computer Maintenance Tips</h2>
+      <p>Regular maintenance is important to keep your computer running smoothly. Here are some essential maintenance tips:</p>
+
+      <p><strong>Disk Cleanup</strong>: Over time, your computer accumulates temporary files and other unnecessary data that can slow it down. Use the built-in Disk Cleanup tool on Windows or "Optimize Storage" on Mac to remove these files and free up space.</p>
+
+      <p><strong>Defragment Your Hard Drive</strong>: On Windows computers, you can use the Disk Defragmenter tool to optimize the arrangement of data on your hard drive, which can improve performance. Note that this is not necessary for SSDs (Solid State Drives). On a Mac, this process is handled automatically by the system.</p>
+
+      <p><strong>Keep Software Updated</strong>: Keeping your operating system and applications up to date is crucial for security and performance. Updates often include important patches and new features that can help your computer run better.</p>
+
+      <p><strong>Uninstall Unused Programs</strong>: If you have programs that you no longer use, consider uninstalling them to free up space and improve system performance. On Windows, you can do this through the Control Panel, and on a Mac, you can drag the application to the Trash.</p>
+
+      <p><strong>Run Antivirus Scans</strong>: Regularly scanning your computer with antivirus software can help detect and remove malware that could slow down your computer or compromise your data. Make sure your antivirus software is up to date and run full system scans periodically.</p>
+
+      <p><strong>Backup Your Data</strong>: Regular backups are important to prevent data loss in case of a system failure. Use an external hard drive or a cloud storage service like Google Drive or Dropbox to keep copies of important files.</p>
+
+      <div class="quiz-container">
+        <h2>Quiz: Test Your Knowledge!</h2>
+        <p>1. Where can you adjust your screen brightness and resolution?</p>
+        <button onclick="checkAnswer(this, true)">Display Settings</button>
+        <button onclick="checkAnswer(this, false)">Sound Settings</button>
+        <button onclick="checkAnswer(this, false)">Network Settings</button>
+
+        <p>2. Which settings help you manage your microphone and speakers?</p>
+        <button onclick="checkAnswer(this, false)">Power Settings</button>
+        <button onclick="checkAnswer(this, true)">Sound Settings</button>
+        <button onclick="checkAnswer(this, false)">Privacy Settings</button>
+
+        <p>3. What settings help you control which apps can access your personal data?</p>
+        <button onclick="checkAnswer(this, false)">Display Settings</button>
+        <button onclick="checkAnswer(this, false)">Sound Settings</button>
+        <button onclick="checkAnswer(this, true)">Privacy Settings</button>
+
+        <p>4. What tool can you use to remove unnecessary files and free up space on your computer?</p>
+        <button onclick="checkAnswer(this, true)">Disk Cleanup</button>
+        <button onclick="checkAnswer(this, false)">Sound Settings</button>
+        <button onclick="checkAnswer(this, false)">Network Settings</button>
+      </div>
+
+      <p>Great job completing this lesson on computer settings and maintenance! Feel free to go back to the main modules or move on to the next lesson.</p>
+      <div class="button-container">
+        <a href="<%= computer_course_path %>" class="button">Back to Computer Modules</a>
+        <a href="<%= computer_safety_path %>" class="button">Next Lesson</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .container {
+    display: center;
+    align-items: flex-start;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .content {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .text-container {
+    flex: 2;
+    padding-right: 20px;
+    box-sizing: border-box;
+  }
+
+  .quiz-container button {
+    display: inline-block;
+    margin: 5px 0;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+  .quiz-container button.correct {
+    color: green;
+  }
+
+  .quiz-container button.incorrect {
+    color: red;
+  }
+
+  .button-container a.button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+
+  .button-container a.button:hover {
+    background-color: #0056b3;
+  }
+</style>
+
+<script>
+  function checkAnswer(button, isCorrect) {
+    if (isCorrect) {
+      button.classList.add('correct');
+      button.innerHTML += ' - Correct!';
+    } else {
+      button.classList.add('incorrect');
+      button.innerHTML += ' - Incorrect!';
+    }
+  }
+</script>

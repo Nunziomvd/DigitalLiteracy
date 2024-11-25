@@ -1,39 +1,83 @@
 <div class="container">
-  <h1>Computer Course</h1>
-  <p>Welcome to the Computer Course! This course will help you master the basics of using a computer, from navigating the operating system to staying safe online.</p>
+  <!-- Sidebar for Modules -->
+  <div class="content">
+    <aside class="sidebar">
+      <h2>Modules</h2>
+      <ul class="module-list">
+        <li><a href="<%= computer_basics_path %>">1. Understanding Computer Basics</a></li>
+        <li><a href="<%= computer_passwords_path %>">2. Passwords</a></li>
+        <li><a href="<%= computer_internet_path %>">3. Navigating the Internet</a></li>
+        <li><a href="<%= computer_apps_path %>">4. Exploring Useful Applications</a></li>
+        <li><a href="<%= computer_files_path %>">5. Managing Files and Folders</a></li>
+        <li><a href="<%= computer_safety_path %>">6. Staying Safe Online</a></li>
+        <li><a href="<%= computer_settings_path %>">7. Settings and Maintaince</a></li>
+      </ul>
+    </aside>
 
-  <h2>Topics Covered:</h2>
-  <ul>
-    <li>Understanding computer hardware and software</li>
-    <li>Using a keyboard and mouse</li>
-    <li>Navigating the desktop and file explorer</li>
-    <li>Browsing the internet safely</li>
-    <li>Creating and managing email accounts</li>
-    <li>Installing and uninstalling software</li>
-    <li>Basic troubleshooting and maintenance</li>
-  </ul>
+    <!-- Main Content Area -->
+    <main class="main-content">
+      <h1>Computers and Online Safety</h1>
+      <p>Welcome to the computer course. Here you will learn everything you need to feel confident in using and protecting your computer.</p>
 
-  <h2>Learning Objectives:</h2>
-  <p>By the end of this course, you will be able to:</p>
-  <ul>
-    <li>Navigate your computer's interface confidently</li>
-    <li>Create, save, and manage files and folders</li>
-    <li>Send and receive emails</li>
-    <li>Browse the web securely</li>
-    <li>Perform basic troubleshooting for common issues</li>
-  </ul>
+      <!-- Add a picture -->
+      <div class="image-container">
+        <%= image_tag 'computer_comp.png', alt: 'TV Homescreen', class: 'homescreen-image', style: 'max-width: 90%; height: auto;' %>
+      </div>
 
-  <h2>Course Resources:</h2>
-  <ul>
-    <li><a href="https://support.microsoft.com/" target="_blank">Microsoft Support</a></li>
-    <li><a href="https://support.apple.com/" target="_blank">Apple Support</a></li>
-    <li><a href="https://www.google.com/chrome/" target="_blank">Google Chrome Guide</a></li>
-  </ul>
 
-  <h2>Next Steps:</h2>
-  <p>Familiarize yourself with the keyboard and mouse, and explore your computer's desktop. Practice creating folders and browsing the web!</p>
-
-  <!-- Back to Courses button -->
-  <a href="<%= courses_path %>" class="button">Back to Courses</a>
+      <p>To start lesson 1 click here or return to all courses.</p>
+      <a href="<%= computer_basics_path %>" class="button">Begin</a>
+      <a href="<%= courses_path %>" class="button">Return</a>
+    </main>
+  </div>
 </div>
- 
+
+<style>
+  .container {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .content {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .sidebar {
+    width: 25%;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  .main-content {
+    width: 75%;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  .image-container {
+    margin-top: 20px;
+  }
+
+  body {
+    margin: 0;
+    overflow-x: hidden;
+  }
+
+  .button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+
+  .button:hover {
+    background-color: #0056b3;
+  }
+</style>

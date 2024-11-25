@@ -1,0 +1,112 @@
+<div class="container">
+  <h1>Computer Applications</h1>
+  <div class="content">
+    <div class="text-container">
+      <p>Welcome to this lesson on computer applications! In this lesson, we will cover what computer applications are, how to use them effectively, and explore some of the most popular applications that help you in daily tasks.</p>
+
+      <p>A <strong>Computer Application</strong>, or simply an app, is a software program designed to help you perform specific tasks. Applications can be for writing documents, editing photos, browsing the internet, or even playing games.</p>
+
+      <p><strong>Word Processors</strong>, such as Microsoft Word or Google Docs, are used to create and edit text documents. You can write essays, reports, or even letters using these apps. They come with features like spell-check and formatting tools to help you create professional-looking documents.</p>
+
+      <p><strong>Spreadsheets</strong>, like Microsoft Excel or Google Sheets, are used for organizing data. You can create tables, perform calculations, and even visualize data using charts and graphs. They are great for managing finances, tracking projects, or analyzing data.</p>
+
+      <p>If you need to <strong>communicate</strong> with others, you can use applications such as Zoom, Microsoft Teams, or Skype. These apps allow you to have video calls, send messages, and collaborate with people in real time, which is especially useful for remote work or staying in touch with friends and family.</p>
+
+      <p>For browsing the internet, you would use a <strong>Web Browser</strong> like Google Chrome, Firefox, or Safari. Browsers help you access websites, search for information, and interact with online content.</p>
+
+      <p><strong>Media Players</strong>, such as VLC or Windows Media Player, let you watch videos or listen to music on your computer. You can use them to play different types of media files stored on your computer or streamed from the internet.</p>
+
+      <p>To open any of these applications, simply double-click on their icon with your mouse. You can find them in the Start Menu (for Windows) or the Dock (for Mac).</p>
+
+      <div class="quiz-container">
+        <h2>Quiz: Test Your Knowledge!</h2>
+        <p>1. Which application would you use to write a report?</p>
+        <button onclick="checkAnswer(this, true)">Microsoft Word</button>
+        <button onclick="checkAnswer(this, false)">VLC Media Player</button>
+        <button onclick="checkAnswer(this, false)">Google Chrome</button>
+
+        <p>2. What type of app would you use to organize and analyze data?</p>
+        <button onclick="checkAnswer(this, false)">Zoom</button>
+        <button onclick="checkAnswer(this, true)">Google Sheets</button>
+        <button onclick="checkAnswer(this, false)">Safari</button>
+
+        <p>3. Which app allows you to browse the internet?</p>
+        <button onclick="checkAnswer(this, true)">Firefox</button>
+        <button onclick="checkAnswer(this, false)">Excel</button>
+        <button onclick="checkAnswer(this, false)">Skype</button>
+      </div>
+
+      <p>Great job completing this lesson on computer applications! Feel free to go back to the main modules or move on to the next lesson.</p>
+      <div class="button-container">
+        <a href="<%= computer_course_path %>" class="button">Back to Computer Modules</a>
+        <a href="<%= computer_files_path %>" class="button">Next Lesson</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .container {
+    display: center;
+    align-items: flex-start;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .content {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .text-container {
+    flex: 2;
+    padding-right: 20px;
+    box-sizing: border-box;
+  }
+
+  .quiz-container button {
+    display: inline-block;
+    margin: 5px 0;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+  .quiz-container button.correct {
+    color: green;
+  }
+
+  .quiz-container button.incorrect {
+    color: red;
+  }
+
+  .button-container a.button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+
+  .button-container a.button:hover {
+    background-color: #0056b3;
+  }
+</style>
+
+<script>
+  function checkAnswer(button, isCorrect) {
+    if (isCorrect) {
+      button.classList.add('correct');
+      button.innerHTML += ' - Correct!';
+    } else {
+      button.classList.add('incorrect');
+      button.innerHTML += ' - Incorrect!';
+    }
+  }
+</script>

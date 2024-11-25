@@ -1,29 +1,83 @@
-<div class="page-layout">
+<div class="container">
   <!-- Sidebar for Modules -->
-  <aside class="sidebar">
-    <h2>Modules</h2>
-    <ul class="module-list">
-      <li><a href="<%= tv_remote_path %>">1. Mastering the Remote Control</a></li>
-      <li><a href="<%= tv_homescreen_path %>">2. Navigating the Home Screen</a></li>
-      <li><a href="<%= tv_apps_path %>">3. Exploring Apps and Services</a></li>
-      <li><a href="<%= tv_live_path %>">4. Watching Live TV and Recordings</a></li>
-      <li><a href="<%= tv_voice_path %>">5. Using Voice Commands</a></li>
-      <li><a href="<%= tv_settings_path %>">6. Customizing Settings</a></li>
-      <li><a href="<%= tv_maintain_path %>">7. Maintaing Your Smart TV</a></li>
-    </ul>
-  </aside>
+  <div class="content">
+    <aside class="sidebar">
+      <h2>Modules</h2>
+      <ul class="module-list">
+        <li><a href="<%= tv_remote_path %>">1. Mastering the Remote Control</a></li>
+        <li><a href="<%= tv_homescreen_path %>">2. Navigating the Home Screen</a></li>
+        <li><a href="<%= tv_apps_path %>">3. Exploring Apps and Services</a></li>
+        <li><a href="<%= tv_live_path %>">4. Watching Live TV and Recordings</a></li>
+        <li><a href="<%= tv_voice_path %>">5. Using Voice Commands</a></li>
+        <li><a href="<%= tv_settings_path %>">6. Customizing Settings</a></li>
+        <li><a href="<%= tv_maintain_path %>">7. Maintaining Your Smart TV</a></li>
+      </ul>
+    </aside>
 
-  <!-- Main Content Area -->
-  <main class="content">
-    <h1>Current Course: Master Your Smart TV</h1>
-    <p>Welcome to the TV course, here you will learn everything you need to feel confident in using your new tv</p>
+    <!-- Main Content Area -->
+    <main class="main-content">
+      <h1>Current Course: Master Your Smart TV</h1>
+      <p>Welcome to the TV course, here you will learn everything you need to feel confident in using your new TV.</p>
 
-    <!-- Add a picture -->
-    <div class="image-container">
-      <%= image_tag 'tv_homescreen.png', alt: 'TV Homescreen', class: 'homescreen-image', size: '800x500' %>
-    </div>
+      <!-- Add a picture -->
+      <div class="image-container">
+        <%= image_tag 'tv_homescreen.png', alt: 'TV Homescreen', class: 'homescreen-image', style: 'max-width: 90%; height: auto;' %>
+      </div>
 
-    <p>To start lesson 1 click here</p>
-    <a href="<%= tv_remote_path %>" class="button">Begin</a>
-  </main>
+      <p>To start lesson 1 click here or return to all courses.</p>
+      <a href="<%= tv_remote_path %>" class="button">Begin</a>
+      <a href="<%= courses_path %>" class="button">Return</a>
+    </main>
+  </div>
 </div>
+
+<style>
+  .container {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .content {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .sidebar {
+    width: 25%;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  .main-content {
+    width: 75%;
+    padding: 0px;
+    margin-top: -70px;
+    box-sizing: border-box;
+  }
+
+  .image-container {
+    margin-top: 20px;
+  }
+
+  body {
+    margin: 0;
+    overflow-x: hidden;
+  }
+
+  .button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+
+  .button:hover {
+    background-color: #0056b3;
+  }
+</style>

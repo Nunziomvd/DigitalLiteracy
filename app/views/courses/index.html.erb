@@ -1,6 +1,6 @@
 <div class="container">
-  <h1>Welcome to Senior Digital Literacy</h1>
-  <p>This web application is designed to help seniors improve their digital skills!</p>
+  <h1>Available Courses</h1>
+  <p>Select a course to jump right in and master different parts of technology!</p>
 
   <!-- Course buttons -->
   <div class="courses">
@@ -10,3 +10,37 @@
   </div>
 </div>
   
+<style>
+  body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Prevent any scrollbars from appearing */
+    width: 110%;
+    height: 100%;
+  }
+
+  .container {
+
+    box-sizing: border-box;
+    display: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+  }
+
+  .courses {
+    display: center;
+    gap: 20px; /* Spacing between buttons */
+    flex-wrap: wrap; /* Ensure buttons wrap within the container */
+  }
+
+  .button {
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+</style>

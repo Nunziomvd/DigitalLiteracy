@@ -2,19 +2,34 @@
   <h1>TV Home Screen Navigation</h1>
   <div class="content">
     <div class="text-container">
-      <p>Welcome to the next lesson! In this lesson, we will learn how to navigate the TV home screen using your remote control.</p>
+    <p>Welcome to the next lesson! In this lesson, we will learn how to navigate the TV home screen using your remote control.</p>
+
+    <div class="image-container">
+    <%= image_tag 'tv_homescreen.png', alt: 'TV Home Screen', class: 'remote-image', style: 'max-width: 40%; height: auto;' %>
+  </div>
 
       <p>The first button you will use is the <strong>Home button</strong>. This button usually has a house icon on it. Pressing this button will take you to the TV's home screen, where you can see all the available apps, settings, and inputs.</p>
 
       <p>Once on the home screen, you can use the <strong>Arrow buttons</strong> on the remote to move around. These buttons help you navigate between different sections, such as streaming apps, live TV, and settings. The arrow buttons are usually arranged in a directional pad (up, down, left, right).</p>
+      <!-- Add a picture -->
+      <div class="image-container">
+        <%= image_tag 'tv_arrows.png', alt: 'TV Homescreen', class: 'homescreen-image', style: 'max-width: 10%; height: auto;' %>
+      </div>
 
-      <p>After selecting an option, press the <strong>OK or Select button</strong> (usually in the center of the directional pad) to open it. This button is crucial for confirming your choices on the home screen.</p>
+      <p>After navigating to a desired app, press the <strong>OK or Select button</strong> (usually in the center of the directional pad) to open it. This button is crucial for confirming your choices on the home screen.</p>
 
       <p>Many TV home screens have shortcuts for popular apps like Netflix, YouTube, or Amazon Prime Video. You can access these by selecting them directly from the home screen or by using any dedicated buttons on your remote control if they exist.</p>
+      <!-- Add a picture -->
+      <div class="image-container">
+        <%= image_tag 'tv_shortcuts.png', alt: 'TV Homescreen', class: 'homescreen-image', style: 'max-width: 50%; height: auto;' %>
+      </div>
 
       <p>To return to the previous screen, use the <strong>Back button</strong>, which is typically represented by an arrow pointing to the left. This button allows you to go back step-by-step if you make a mistake or want to explore a different section.</p>
+      <!-- Add a picture -->
+      <div class="image-container">
+        <%= image_tag 'tv_back.png', alt: 'TV Homescreen', class: 'homescreen-image', style: 'max-width:20%; height: auto;' %>
+      </div>
 
-      <p>That covers the basics of navigating the TV home screen. Either return to all lessons or continue to the next lesson to learn about additional features!</p>
 
       <!-- Add quiz here -->
       <div class="quiz-container">
@@ -41,11 +56,6 @@
         <a href="<%= tv_apps_path %>" class="button">Next Lesson</a>
       </div>
     </div>
-
-    <div class="image-container">
-      <%= image_tag 'tv_homescreen.png', alt: 'TV Home Screen', class: 'remote-image' %>
-    </div>
-  </div>
 </div>
 
 <style>
@@ -72,7 +82,7 @@
 
   .image-container {
     flex: 1;
-    display: flex;
+    display: center;
     flex-direction: column;
     align-items: flex-end;
     box-sizing: border-box;
@@ -95,7 +105,7 @@
   }
 
   .quiz-container button {
-    display: block;
+    display: inline-block;
     margin: 5px 0;
     padding: 10px;
     border: none;

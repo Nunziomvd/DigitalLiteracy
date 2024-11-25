@@ -7,6 +7,26 @@
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+
+    <style>
+      html, body {
+        height: 100%;
+        margin: 0;
+      }
+      .main-layout {
+        min-height: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+      .content {
+        flex: 1;
+      }
+      footer {
+        text-align: center;
+        padding: 1em 0;
+        background: #1e1e1e;
+      }
+    </style>
   </head>
 
   <body>
@@ -17,9 +37,7 @@
       <div class="content">
         <%= yield %>
       </div>
-      <footer>
-        <p>© 2024 Senior Digital Literacy. All rights reserved.</p>
-      </footer>
+
     </div>
   </body>
 </html>
