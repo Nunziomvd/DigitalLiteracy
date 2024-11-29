@@ -1,10 +1,34 @@
 # Senior Digital Literacy
 
+## 🚀 Overview
+
 This application was created with two main goals: to provide a software solution that supports individuals who are not digitally proficient, particularly seniors, and to serve as a learning project for myself to practice Ruby, Ruby on Rails, and other programming languages.
 
-The inspiration for this project came from conversations with my grandmother, where we discussed the various challenges she faced when using digital devices. These discussions highlighted the need for accessible, user-friendly learning tools for those new to technology.
+Currently, the application offers two courses: Tv and Computers. Each course includes multiple lessons including lectures pictures and activities. 
 
-Currently, the application offers three courses: Phones, TVs, and Computers. Each course includes or will include lectures, images, videos, interactive activities, quizzes, and challenges designed to help users learn and reinforce key concepts effectively.
+Future work on this project can include UI changes, additional courses, and updates/additions to the current lessons.
 
-I am committed to expanding and improving the content to ensure it meets the needs of seniors who wish to enhance their digital skills in an engaging and supportive way.
+## ✨ Features
 
+- **Home Page**: Page to "enter" the site (future login)
+- **Course's Page**: Place to pick one of your courses
+  - Computers
+  - Tv's
+- **Course's Home Page**: All lessons available for the current course
+- **Quiz**: Test available after each lesson to reinforce learning
+- **Password Activities**: Practice for making a strong passwords
+
+
+- ## 🔧 Tech Stack
+
+- Rails
+- Ruby On Rails
+- Javascript
+
+
+## 🎮 Usage
+
+1. Select a course
+2. Pick a lesson
+3. Read lesson
+4. Do the activity
