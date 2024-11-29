@@ -19,7 +19,7 @@ Future work on this project can include UI changes, additional courses, and upda
 - **Password Activities**: Practice for making a strong passwords
 
 
-- ## 🔧 Tech Stack
+## 🔧 Tech Stack
 
 - Rails
 - Ruby On Rails
