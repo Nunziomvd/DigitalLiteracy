@@ -5,7 +5,9 @@
       <p>Welcome to the next lesson! In this lesson, we will discuss how to use voice commands to control your TV, including some basic voice commands that can make your viewing experience even easier.</p>
 
       <p>Many modern TVs come with a <strong>Voice Control button</strong> on the remote. This button is usually represented by a <strong>microphone icon</strong>. By pressing and holding this button, you can speak directly to your TV to perform various actions, such as changing channels, adjusting volume, or searching for content.</p>
-
+      <div class="image-container">
+      <%= image_tag 'tv_talking.png'; %>
+    </div>
       <p>Here are some <strong>basic voice commands</strong> you can use:</p>
       <ul>
         <li><strong>"Turn on the TV"</strong> or <strong>"Turn off the TV"</strong> - Use these commands to power the TV on or off.</li>
@@ -73,7 +75,7 @@
 
   .image-container {
     flex: 1;
-    display: flex;
+    display: center;
     flex-direction: column;
     align-items: flex-end;
     box-sizing: border-box;
@@ -115,6 +117,13 @@
 
 <script>
   function checkAnswer(button, isCorrect) {
+    // Prevent additional clicks on this button
+    if (button.disabled) return;
+
+    // Mark the button as clicked and disable it
+    button.disabled = true;
+
+    // Add correct or incorrect feedback
     if (isCorrect) {
       button.classList.add('correct');
       button.innerHTML += ' - Correct!';

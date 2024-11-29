@@ -3,7 +3,9 @@
   <div class="content">
     <div class="text-container">
       <p>Welcome to this lesson on files and folders! In this lesson, we will cover what files and folders are, how to organize them effectively, and explore some best practices for managing your digital content.</p>
-
+      <div class="image-container">
+      <%= image_tag 'computer_difffiles.png', style: 'display: block; margin: auto; max-width: 35%; height: auto;' %>
+    </div>
       <p>A <strong>File</strong> is a collection of data or information that is stored on your computer. Files can be documents, images, videos, or any type of digital content that you create or save. Every file has a name and an extension, such as <em>.docx</em>, <em>.jpg</em>, or <em>.mp4</em>, which helps you identify what type of data it contains.</p>
 
       <p>A <strong>Folder</strong>, also known as a directory, is used to organize files. Folders help you keep related files together, making it easier to find and manage your content. For example, you might have a folder named "Vacation Photos" that contains all your pictures from a recent trip.</p>
@@ -15,7 +17,9 @@
       <p>It’s also a good idea to use <strong>meaningful file names</strong>. Instead of naming a document "Document1," use a name like "Resume_2024" so that you know exactly what the file contains without needing to open it.</p>
 
       <p>If you need to <strong>search for a file</strong>, you can use the search bar in File Explorer (Windows) or Finder (Mac). Just type in part of the file name or file type, and the system will help you locate it quickly.</p>
-
+      <div class="image-container">
+      <%= image_tag 'computer_filetutorial.png', style: 'display: block; margin: auto; max-width: 35%; height: auto;' %>
+    </div>
       <div class="quiz-container">
         <h2>Quiz: Test Your Knowledge!</h2>
         <p>1. What is a folder used for?</p>
@@ -98,14 +102,21 @@
 </style>
 
 <script>
-  function checkAnswer(button, isCorrect) {
-    if (isCorrect) {
-      button.classList.add('correct');
-      button.innerHTML += ' - Correct!';
-    } else {
-      button.classList.add('incorrect');
-      button.innerHTML += ' - Incorrect!';
-    }
+function checkAnswer(button, isCorrect) {
+  // Prevent additional clicks on this button
+  if (button.disabled) return;
+
+  // Mark the button as clicked and disable it
+  button.disabled = true;
+
+  // Add correct or incorrect feedback
+  if (isCorrect) {
+    button.classList.add('correct');
+    button.innerHTML += ' - Correct!';
+  } else {
+    button.classList.add('incorrect');
+    button.innerHTML += ' - Incorrect!';
   }
+}
 </script>
 

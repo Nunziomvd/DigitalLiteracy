@@ -2,16 +2,20 @@
   <h1>Computer Safety</h1>
   <div class="content">
     <div class="text-container">
-      <p>Welcome to this lesson on computer safety! In this lesson, we will cover essential tips on keeping your computer and personal information safe while using various applications and the internet.</p>
-
+      <p>Welcome to this lesson on computer safety! In this lesson, we will reinforce ideas and cover essential tips on keeping your computer and personal information safe while using various applications and the internet.</p>
+      <div class="image-container">
+      <%= image_tag 'computer_safety.png', style: 'display: block; margin: auto; max-width: 75%; height: auto;' %>
+    </div>
       <p><strong>Antivirus Software</strong> is one of the most important tools for computer safety. It helps protect your computer from harmful viruses and malware that can steal your information or damage your files. Make sure to keep your antivirus software updated.</p>
 
-      <p>Another important safety tip is to create <strong>strong passwords</strong>. Use a mix of letters, numbers, and special characters to create passwords that are difficult for others to guess. Avoid using easily guessable information like your name or birthday.</p>
+      <p>As mentioned before another important safety tip is to create <strong>strong passwords</strong>. <p>
 
       <p>When browsing the internet, always look for the <strong>lock icon</strong> in the address bar. This indicates that the website is secure and your information is encrypted. Be cautious when entering personal information on unsecured websites.</p>
 
       <p><strong>Phishing</strong> is a common online threat where hackers try to trick you into giving away personal information through fake emails or websites. Be careful of suspicious emails or messages, especially those asking for sensitive information like passwords or credit card numbers.</p>
-
+      <div class="image-container">
+      <%= image_tag 'computer_phising.png', style: 'display: block; margin: auto; max-width: 75%; height: auto;' %>
+    </div>
       <p>Another safety measure is to <strong>keep your software updated</strong>. Software updates often include security patches that protect against new threats. Set your computer to update automatically to make sure you have the latest protection.</p>
 
       <p>To keep your data safe, make sure to <strong>back up your files</strong> regularly. You can use an external hard drive or a cloud storage service like Google Drive or Dropbox. Backups help ensure you don't lose important information if your computer crashes or gets infected.</p>
@@ -99,6 +103,13 @@
 
 <script>
   function checkAnswer(button, isCorrect) {
+    // Prevent additional clicks on this button
+    if (button.disabled) return;
+
+    // Mark the button as clicked and disable it
+    button.disabled = true;
+
+    // Add correct or incorrect feedback
     if (isCorrect) {
       button.classList.add('correct');
       button.innerHTML += ' - Correct!';

@@ -113,13 +113,20 @@
 </style>
 
 <script>
-  function checkAnswer(button, isCorrect) {
-    if (isCorrect) {
-      button.classList.add('correct');
-      button.innerHTML += ' - Correct!';
-    } else {
-      button.classList.add('incorrect');
-      button.innerHTML += ' - Incorrect!';
-    }
+function checkAnswer(button, isCorrect) {
+  // Prevent additional clicks on this button
+  if (button.disabled) return;
+
+  // Mark the button as clicked and disable it
+  button.disabled = true;
+
+  // Add correct or incorrect feedback
+  if (isCorrect) {
+    button.classList.add('correct');
+    button.innerHTML += ' - Correct!';
+  } else {
+    button.classList.add('incorrect');
+    button.innerHTML += ' - Incorrect!';
   }
+}
 </script>

@@ -5,9 +5,13 @@
       <p>Welcome to the next lesson! In this lesson, we will cover how to navigate the internet safely. The internet can be a powerful tool for finding information, staying connected, and learning new things, but it is important to stay safe while using it.</p>
 
       <p>When browsing the internet, it’s important to use a <strong>secure browser</strong> like Chrome, Firefox, or Edge. These browsers help protect your information and alert you to potentially unsafe websites.</p>
-
-      <p>A key part of safe internet browsing is recognizing <strong>secure websites</strong>. Secure websites will have an address that starts with <strong>"https://"</strong>, where the "s" stands for secure. You should also see a small padlock icon next to the web address, which indicates that your connection is private.</p>
-
+      <div class="image-container">
+      <%= image_tag 'computer_browsers.png', style: 'display: block; margin: auto; max-width: 75%; height: auto;' %>
+    </div>
+      <p>A key part of safe internet browsing is recognizing <strong>secure websites</strong>. Secure websites will have an address that starts with <strong>"https://"</strong>, where the "s" stands for secure. You could also see a small padlock icon next to the web address, which indicates that your connection is private.</p>
+      <div class="image-container">
+      <%= image_tag 'computer_https.png', style: 'display: block; margin: auto; max-width: 75%; height: auto;' %>
+    </div>
       <p>Be cautious about the information you share online. You should never share personal details such as your <strong>address, phone number, passwords, or financial information</strong> unless you are sure the website is trustworthy and secure.</p>
 
       <p>Avoid clicking on suspicious links or opening unexpected attachments, especially in emails. This is a common way for malicious software, called <strong>malware</strong>, to infect your computer. Always verify the source before clicking a link or downloading anything.</p>
@@ -15,7 +19,9 @@
       <p>Using <strong>strong passwords</strong> for your online accounts is also a key aspect of internet safety. Never use the same password for multiple accounts, and consider using a password manager to keep track of them.</p>
 
       <p>Another way to stay safe is to keep your <strong>antivirus software</strong> up to date. Antivirus software helps protect your computer from malware and other security threats while you are browsing online.</p>
-
+      <div class="image-container">
+      <%= image_tag 'computer_antivirus.png', style: 'display: block; margin: auto; max-width: 75%; height: auto;' %>
+    </div>
       <p>Lastly, be cautious when using <strong>public Wi-Fi</strong>. Public networks can be less secure, making it easier for hackers to access your information. Avoid accessing sensitive accounts or making online purchases while connected to public Wi-Fi.</p>
 
       <!-- Add multiple-choice quiz here -->
@@ -111,13 +117,20 @@
 </style>
 
 <script>
-  function checkAnswer(button, isCorrect) {
-    if (isCorrect) {
-      button.classList.add('correct');
-      button.innerHTML += ' - Correct!';
-    } else {
-      button.classList.add('incorrect');
-      button.innerHTML += ' - Incorrect!';
-    }
+function checkAnswer(button, isCorrect) {
+  // Prevent additional clicks on this button
+  if (button.disabled) return;
+
+  // Mark the button as clicked and disable it
+  button.disabled = true;
+
+  // Add correct or incorrect feedback
+  if (isCorrect) {
+    button.classList.add('correct');
+    button.innerHTML += ' - Correct!';
+  } else {
+    button.classList.add('incorrect');
+    button.innerHTML += ' - Incorrect!';
   }
+}
 </script>

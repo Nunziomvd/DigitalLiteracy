@@ -5,7 +5,9 @@
       <p>Welcome to the next lesson! In this lesson, we will discuss the various settings available on your TV and how to customize them to enhance your viewing experience.</p>
 
       <p>To access the TV settings, press the <strong>Settings button</strong> on your remote, which is usually represented by a <strong>gear icon</strong>. Alternatively, you can navigate to the settings menu from the TV's home screen.</p>
-
+     <div class="image-container">
+      <%= image_tag 'tv_settings.png'; %>
+    </div>
 
       <p>Here are some key settings that you can adjust:</p>
       <ul>
@@ -18,7 +20,9 @@
       </ul>
 
       <p>To make adjustments, use the <strong>Arrow buttons</strong> on your remote to navigate through the settings menu, and press the <strong>OK or Select button</strong> to choose an option. You can always press the <strong>Back button</strong> to return to the previous menu if needed.</p>
-
+      <div class="image-container">
+      <%= image_tag 'tv_settingpage.png'; %>
+    </div>
       <p>That covers the basics of customizing your TV settings. Feel free to explore the settings menu to adjust your TV according to your preferences!</p>
 
       <!-- Add quiz here -->
@@ -74,7 +78,7 @@
 
   .image-container {
     flex: 1;
-    display: flex;
+    display: center;
     flex-direction: column;
     align-items: flex-end;
     box-sizing: border-box;
@@ -115,13 +119,20 @@
 </style>
 
 <script>
-  function checkAnswer(button, isCorrect) {
-    if (isCorrect) {
-      button.classList.add('correct');
-      button.innerHTML += ' - Correct!';
-    } else {
-      button.classList.add('incorrect');
-      button.innerHTML += ' - Incorrect!';
-    }
+function checkAnswer(button, isCorrect) {
+  // Prevent additional clicks on this button
+  if (button.disabled) return;
+
+  // Mark the button as clicked and disable it
+  button.disabled = true;
+
+  // Add correct or incorrect feedback
+  if (isCorrect) {
+    button.classList.add('correct');
+    button.innerHTML += ' - Correct!';
+  } else {
+    button.classList.add('incorrect');
+    button.innerHTML += ' - Incorrect!';
   }
+}
 </script>

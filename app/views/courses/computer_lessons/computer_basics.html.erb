@@ -5,14 +5,23 @@
       <p>Welcome to the first lesson! In this lesson, we will cover the basics of using a computer, including understanding its key components and how they work together.</p>
 
       <p>One of the most important parts of a computer is the <strong>Monitor</strong>. It displays what you are doing on the computer, allowing you to interact with different applications and see your work.</p>
+      <div class="image-container">
+        <%= image_tag 'computer_monitor.png'; %>
+      </div>
 
       <p>The <strong>Mouse</strong> is another essential component. It helps you navigate around your computer screen by moving a pointer. You can click on icons, select files, or open programs using the mouse.</p>
 
       <p>The <strong>Keyboard</strong> is used for typing. It allows you to input letters, numbers, and other symbols to communicate with your computer. You will often use it to write documents or perform searches on the internet.</p>
+      <div class="image-container">
+        <%= image_tag 'computer_mak.png'; %>
+      </div>
 
       <p>When using the computer, you will interact with a variety of programs or applications. To open a program, simply double-click on its icon with the mouse. For example, if you want to browse the internet, you would double-click on the browser icon (such as Chrome or Firefox).</p>
 
       <p>Computers also have a <strong>Start Menu</strong> (on Windows computers) or a <strong>Dock</strong> (on Mac computers) where you can find and open applications, settings, and files.</p>
+      <div class="image-container">
+        <%= image_tag 'computers_start.png'; %>
+      </div>
 
       <p>To <strong>turn off your computer</strong>, you should always do it properly through the start menu, selecting the shutdown option. This helps prevent damage and keeps your computer working well.</p>
 
@@ -70,18 +79,20 @@
   }
 
   .image-container {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
+    display: center;
     box-sizing: border-box;
-  }
-
-  .image-container img {
-    margin-bottom: 20px;
     max-width: 100%;
     height: auto;
   }
+  .image-container img {
+    max-width: 25%; /* Adjust the percentage to make the image smaller */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Ensure proper layout */
+    margin: 0 auto; /* Center the image */
+}
+
+
+
 
   body {
     margin: 0;
@@ -123,6 +134,13 @@
 
 <script>
   function checkAnswer(button, isCorrect) {
+    // Prevent additional clicks on this button
+    if (button.disabled) return;
+
+    // Mark the button as clicked and disable it
+    button.disabled = true;
+
+    // Add correct or incorrect feedback
     if (isCorrect) {
       button.classList.add('correct');
       button.innerHTML += ' - Correct!';

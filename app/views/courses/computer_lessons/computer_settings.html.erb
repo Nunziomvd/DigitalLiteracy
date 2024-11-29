@@ -15,7 +15,9 @@
       <p><strong>Privacy Settings</strong> are also very important. These settings help control which apps can access your location, microphone, and camera. You can also manage permissions for other types of data. On Windows, go to "Privacy" settings, and on Mac, go to "Security & Privacy" in "System Preferences".</p>
 
       <p>You can also customize your computer with <strong>Personalization Settings</strong>. This includes changing your desktop background, choosing a theme, or modifying the lock screen. These options help make your computer feel more personal and comfortable. On Windows, you can access these options under "Personalization," and on Mac, you can find them in "Desktop & Screen Saver" settings.</p>
-
+      <div class="image-container">
+      <%= image_tag 'computer_settings.png', style: 'display: block; margin: auto; max-width: 75%; height: auto;' %>
+    </div>
       <h2>Computer Maintenance Tips</h2>
       <p>Regular maintenance is important to keep your computer running smoothly. Here are some essential maintenance tips:</p>
 
@@ -54,11 +56,9 @@
         <button onclick="checkAnswer(this, false)">Network Settings</button>
       </div>
 
-      <p>Great job completing this lesson on computer settings and maintenance! Feel free to go back to the main modules or move on to the next lesson.</p>
+      <p>Great job completing the computer course for Senior Digiral Literacy.</p>
       <div class="button-container">
-        <a href="<%= computer_course_path %>" class="button">Back to Computer Modules</a>
-        <a href="<%= computer_safety_path %>" class="button">Next Lesson</a>
-      </div>
+        <a href="<%= computer_course_path %>" class="button">Back to Computer Modules</a>      </div>
     </div>
   </div>
 </div>
@@ -118,13 +118,20 @@
 </style>
 
 <script>
-  function checkAnswer(button, isCorrect) {
-    if (isCorrect) {
-      button.classList.add('correct');
-      button.innerHTML += ' - Correct!';
-    } else {
-      button.classList.add('incorrect');
-      button.innerHTML += ' - Incorrect!';
-    }
+function checkAnswer(button, isCorrect) {
+  // Prevent additional clicks on this button
+  if (button.disabled) return;
+
+  // Mark the button as clicked and disable it
+  button.disabled = true;
+
+  // Add correct or incorrect feedback
+  if (isCorrect) {
+    button.classList.add('correct');
+    button.innerHTML += ' - Correct!';
+  } else {
+    button.classList.add('incorrect');
+    button.innerHTML += ' - Incorrect!';
   }
+}
 </script>

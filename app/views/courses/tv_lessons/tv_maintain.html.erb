@@ -5,7 +5,9 @@
       <p>Welcome to the next lesson! In this lesson, we will discuss how to properly maintain your TV to ensure it continues working smoothly and provides the best viewing experience.</p>
 
       <p>Proper maintenance of your TV can extend its lifespan and improve its performance. Here are some tips to keep your TV in good condition:</p>
-
+      <div class="image-container">
+      <%= image_tag 'tv_clean.png'; %>
+    </div>
       <ul>
         <li><strong>Regular Cleaning</strong>: Dust can accumulate on the screen and vents, which may affect picture quality and airflow. Use a soft, dry microfiber cloth to clean the TV screen and remove dust. Avoid using harsh chemicals or spraying liquid directly on the screen, as this can damage the display.</li>
         <li><strong>Proper Ventilation</strong>: Make sure your TV has adequate ventilation to prevent overheating. Avoid placing the TV in tight or enclosed spaces, and ensure there is enough space around the TV for airflow. This helps maintain optimal performance and prevents damage due to excessive heat.</li>
@@ -14,7 +16,9 @@
         <li><strong>Handling with Care</strong>: Avoid pressing too hard on the screen when cleaning or moving the TV. The display is delicate and can be damaged if too much pressure is applied. When moving the TV, always use two people to lift and carry it to avoid dropping or damaging the device.</li>
         <li><strong>Protecting from Power Surges</strong>: Use a surge protector to protect your TV from electrical surges that can occur during storms or power outages. This helps prevent damage to the internal components of the TV.</li>
       </ul>
-
+     <div class="image-container">
+      <%= image_tag 'tv_updata.png'; %>
+    </div>
       <p>By following these maintenance tips, you can keep your TV in excellent condition and enjoy a great viewing experience for years to come!</p>
 
       <!-- Add quiz here -->
@@ -69,7 +73,7 @@
 
   .image-container {
     flex: 1;
-    display: flex;
+    display: center;
     flex-direction: column;
     align-items: flex-end;
     box-sizing: border-box;
@@ -111,6 +115,13 @@
 
 <script>
   function checkAnswer(button, isCorrect) {
+    // Prevent additional clicks on this button
+    if (button.disabled) return;
+
+    // Mark the button as clicked and disable it
+    button.disabled = true;
+
+    // Add correct or incorrect feedback
     if (isCorrect) {
       button.classList.add('correct');
       button.innerHTML += ' - Correct!';
