@@ -36,7 +36,7 @@ Future work on this project can include UI changes, additional courses, and upda
 ## 🏃 Run Program
 
 1a. Download Source Code
-1b. In Project Directory termianl : rails s
+1b. In Project Directory terminal : rails s
 
 2a. Login to VM using server name, user, and password listed in ND-ProjectNotes.pdf
 2b. Follow path listed in ND-ProjectNotes.pdf
